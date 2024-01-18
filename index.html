@@ -1,218 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <header>
-        <div class="log">
-            <h1>blink<span>it</span></h1>
-        </div>
-        <div class="delivery">
-            <h3>Delivery in 8 minutes</h3>
-            <p>Delhi,India</p>
-        </div>
-        <div class="meanu">
-            <i class="fa-regular fa-circle-user"></i>
-        </div>
-        <div class="searchbar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search">
-        </div>
-        <div class="loginbtn">
-            <button>Login</button>
-        </div>
-        <div class="cartbtn">
-            <button><i class="fa-solid fa-cart-arrow-down"></i> My Cart</button>
-        </div>
+      <div class="log">
+        <h1>click<span>it</span></h1>
+      </div>
+      <div class="delivery">
+        <h3>Delivery in 30 minutes</h3>
+        <p>Delhi,India</p>
+      </div>
+      <div class="meanu">
+        <i class="fa-regular fa-circle-user"></i>
+      </div>
+      <div class="searchbar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="loginbtn">
+        <button data-bs-toggle="modal" data-bs-target="#login-popup">
+          Login
+        </button>
+      </div>
+      <div class="loginbtn">
+        <button data-bs-toggle="modal" data-bs-target="#signup-popup">
+          Signup
+        </button>
+      </div>
+      <div class="cartbtn">
+        <button><i class="fa-solid fa-cart-arrow-down"></i> My Cart</button>
+      </div>
     </header>
-    <main>
-        <div class="content">
-            <div class="web_content">
-                
-                <div class="single">
-                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg" alt="">
-                </div>
-                <div class="four_box">
-                    <div class="box"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-10/Web-banner-World-Cup_-1.png" alt=""></div>
-                    <div class="box"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg" alt=""></div>
-                    <div class="box"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg" alt=""></div>
-                    <div class="box"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg" alt=""></div>
-                </div>
-                <div class="eight_boxes">
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                </div>
-                <div class="eight_boxes">
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                    <div class="box1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt=""></div>
-                </div>
-                
-            </div>
 
-            <div class="shop_section">
-                <h1>Dairy, Bread & Eggs</h1>
-                <div class="allshops">
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="shop_section" style="margin-top: 30px;">
-                <h1>Dairy, Bread & Eggs</h1>
-                <div class="allshops">
-                    <div class="shop">
-                        <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                        <div class="two">
-                            <h6>8 MINS</h6>
-                            <h3>Nestle Milknaid Sweetened condense...</h3>
-                           <div class="btn">
-                            <p>Rs. 33</p>
-                            <button>ADD</button>
-                           </div>
-                        </div>
-                    </div>
-                <div class="shop">
-                    <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                    <div class="two">
-                        <h6>8 MINS</h6>
-                        <h3>Nestle Milknaid Sweetened condense...</h3>
-                       <div class="btn">
-                        <p>Rs. 33</p>
-                        <button>ADD</button>
-                       </div>
-                    </div>
-                </div>
+    <div class="modal" id="login-popup">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
 
-                <div class="shop">
-                    <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                    <div class="two">
-                        <h6>8 MINS</h6>
-                        <h3>Nestle Milknaid Sweetened condense...</h3>
-                       <div class="btn">
-                        <p>Rs. 33</p>
-                        <button>ADD</button>
-                       </div>
-                    </div>
-                </div>
-                <div class="shop">
-                    <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                    <div class="two">
-                        <h6>8 MINS</h6>
-                        <h3>Nestle Milknaid Sweetened condense...</h3>
-                       <div class="btn">
-                        <p>Rs. 33</p>
-                        <button>ADD</button>
-                       </div>
-                    </div>
-                </div>
-                <div class="shop">
-                    <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                    <div class="two">
-                        <h6>8 MINS</h6>
-                        <h3>Nestle Milknaid Sweetened condense...</h3>
-                       <div class="btn">
-                        <p>Rs. 33</p>
-                        <button>ADD</button>
-                       </div>
-                    </div>
-                </div>
-                <div class="shop">
-                    <div class="one"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1698318992" alt=""></div>
-                    <div class="two">
-                        <h6>8 MINS</h6>
-                        <h3>Nestle Milknaid Sweetened condense...</h3>
-                       <div class="btn">
-                        <p>Rs. 33</p>
-                        <button>ADD</button>
-                       </div>
-                    </div>
-                </div>
-                
-                </div>
-            </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="">
+              <div class="form-floating mb-3 mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+                <label for="email">Email</label>
+              </div>
+
+              <div class="form-floating mt-3 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Enter password"
+                  name="pswd"
+                />
+                <label for="pwd">Password</label>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-primary btnsize"
+                  data-bs-dismiss="modal"
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        
-    </main>
+      </div>
+    </div>
 
-</body>
+    <div class="modal" id="signup-popup">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Signup</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="">
+              <div class="form-floating mb-3 mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter name"
+                  name="name"
+                />
+                <label for="email">Name</label>
+              </div>
+              <div class="form-floating mb-3 mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+                <label for="email">Email</label>
+              </div>
+
+              <div class="form-floating mt-3 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Enter password"
+                  name="pswd"
+                />
+                <label for="pwd">Password</label>
+              </div>
+              <div class="form-floating mt-3 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Verify password"
+                  name="pswd"
+                />
+                <label for="pwd">Re enter password</label>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-primary btnsize"
+                  data-bs-dismiss="modal"
+                >
+                  Signup
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="content">
+        <div class="web_content">
+          <div class="single">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg"
+              alt=""
+            />
+          </div>
+          <div class="four_box">
+            <div class="box">
+              <img
+                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-10/Web-banner-World-Cup_-1.png"
+                alt=""
+              />
+            </div>
+            <div class="box">
+              <img
+                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg"
+                alt=""
+              />
+            </div>
+            <div class="box">
+              <img
+                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg"
+                alt=""
+              />
+            </div>
+            <div class="box">
+              <img
+                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
