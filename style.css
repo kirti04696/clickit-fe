@@ -153,6 +153,10 @@ main {
   border: 1px solid #318616;
 }
 
+.error {
+  border-color: red;
+}
+
 .meanu {
   font-size: 2.5rem;
   display: none;
