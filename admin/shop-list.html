@@ -17,6 +17,11 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
 
     <link
       rel="stylesheet"
@@ -25,9 +30,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="./shop-list.css" />
+    <script src="shop-list.js"></script>
   </head>
   <body>
+    <!-------------------------------------- navbar ------------------------->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -110,6 +117,10 @@
               href="/"
               class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
             >
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#people-circle"></use>
+              </svg>
+              Admin
             </a>
 
             <ul
@@ -140,15 +151,15 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="./shop-list.html" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#grid"></use>
                   </svg>
-                  Products
+                  Shop
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="./customer-list.html" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
@@ -160,5 +171,23 @@
         </div>
       </div>
     </header>
+    <!-- -----------------------content section -------------------------------->
+    <div class="container">
+      <h2>Shop List</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sl</th>
+            <th>Shop Name</th>
+            <th>Email</th>
+            <th>GSTNo</th>
+            <th>Shop Address</th>
+            <th>Shop status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="shop-data"></tbody>
+      </table>
+    </div>
   </body>
 </html>
