@@ -37,6 +37,13 @@ header {
   margin-left: 30px;
   margin-right: 2vw;
 }
+.requirement-info {
+  margin: 10px;
+}
+.requirement-info div {
+  padding: 10px;
+}
+
 .searchbar {
   display: flex;
   align-items: center;
