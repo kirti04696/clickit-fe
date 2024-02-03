@@ -1,6 +1,6 @@
 async function registerShop(e) {
   e.preventDefault();
-  console.log("===========================");
+
   let shopName = document.getElementById("shopName").value;
   let gstnumber = document.getElementById("gstno").value;
   let shopNumber = document.getElementById("shopNumber").value;
@@ -15,9 +15,6 @@ async function registerShop(e) {
   let accountnumber = document.getElementById("accountnumber").value;
   let bankName = document.getElementById("bankName").value;
   let ifscNumber = document.getElementById("ifscNumber").value;
-
-  if (shopName == null || shopName.trim() == "") {
-  }
 
   let response = await fetch("http://localhost:8080/shop/register", {
     // Adding method type
