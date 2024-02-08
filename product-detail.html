@@ -239,57 +239,49 @@
         </div>
       </div>
     </div>
-    <!-- ----------------------------------main--------------------- -->
-    <main>
-      <div class="fluid-container">
-        <div class="web_content">
-          <div class="single">
-            <img src="./shopping-healthy-food-bg banner.jpg" alt="" />
-            <h3>Find Your favorate Grocery Item at One Click</h3>
-            <div class="searchbar">
-              <input type="text" placeholder="Search" />
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+    <!-- ----------------------------------product Detail--------------------- -->
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-6">
+          <center>
+            <img
+              id="product-img"
+              src="./image-food-items.png"
+              class="img-thumbnail"
+              alt=""
+              width="70%"
+            />
+          </center>
+        </div>
+        <div class="col-6 my-auto">
+          <h3 id="product-title">Product Title</h3>
+          <p class="text-secondary" id="discription">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            inventore porro suscipit voluptate recusandae repellendus ea dicta,
+            placeat illum. Quod magnam facilis, earum recusandae possimus culpa
+            nihil iste unde minus!
+          </p>
+          <h5 id="price">Price 500</h5>
+          <div class="d-flex">
+            <button class="btn btn-primary">Add to Cart</button>
+            <button class="btn btn-warning mx-5">Buy Now</button>
           </div>
-          <!-- <div class="four_box">
-            <div class="box">
-              <img
-                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-10/Web-banner-World-Cup_-1.png"
-              />
-              <h1>sjhfakjhkj</h1>
-            </div>
-            <div class="box">
-              <img
-                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg"
-                alt=""
-              />
-            </div>
-            <div class="box">
-              <img
-                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg"
-                alt=""
-              />
-            </div>
-            <div class="box">
-              <img
-                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg"
-                alt=""
-              />
-            </div>
-          </div> -->
         </div>
       </div>
-    </main>
-    <!-------------------------------product list------------------- -->
-
-    <div
-      class="fluid-container d-flex flex-wrap justify-content-center"
-      id="product-container"
-    ></div>
+      <div class="row">
+        <div class="col-6">
+          <div id="product-details"></div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script src="./js/index.js"></script>
   <script>
-    loadProductData();
+    let currentURL = window.location.href;
+    let urlParams = new URL(currentURL).searchParams;
+    let productId = urlParams.get("id");
+    loadProductDetailById(productId);
   </script>
 </html>
