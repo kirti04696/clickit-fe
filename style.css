@@ -7,10 +7,9 @@
 }
 header {
   width: 100%;
-  height: 86px;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
+  justify-content: space-between;
   gap: 10px;
   /* background-color: yellow; */
   border: 2px solid #e9e2e2e0;
@@ -18,6 +17,14 @@ header {
 .log span {
   color: #318616;
 }
+
+.nav-manu {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  padding: 20px;
+}
+
 .log {
   border-right: 2px solid rgba(238, 236, 236, 0.829);
   height: 100%;
@@ -30,19 +37,31 @@ header {
   margin-left: 30px;
   margin-right: 2vw;
 }
+.requirement-info {
+  margin: 10px;
+}
+.requirement-info div {
+  padding: 10px;
+}
+
 .searchbar {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .searchbar i {
-  background-color: #f8f8f8;
+  background-color: #2c54f4;
   height: 46px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: flex;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
 }
 .searchbar input {
   outline: none;
@@ -50,8 +69,9 @@ header {
   background-color: #f8f8f8;
   width: 473px;
   height: 46px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 20px;
 }
 .loginbtn button {
   font-size: 1.5rem;
@@ -84,9 +104,17 @@ main {
   /* background-color: green; */
   margin: 0 auto 10px;
 }
+.single h3 {
+  /* background-image: url("/shopping-healthy-food-bg\ banner.jpg"); */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+}
 .single img {
   width: 100%;
-  height: 100%;
+  height: 550px;
 }
 .four_box {
   display: flex;

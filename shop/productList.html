@@ -115,7 +115,7 @@
           </div>
           <div class="d-flex flex-column justify-content-center">
             <div id="shop-name">Radhe Krishna General Store</div>
-            <small style="font-size: 10px" id="user-name">Kirti</small>
+            <small style="font-size: 10px" id="user-name">Kirti Sharma</small>
           </div>
         </div>
         <div>
@@ -164,6 +164,30 @@
         </div>
       </div>
     </header>
-    <script src="../js/load-profile-data.js"></script>
+    <div class="container mt-3">
+      <div class="d-flex justify-content-between">
+        <h2>Product List</h2>
+        <a href="./add-product.html"
+          ><button class="btn btn-primary">Add Product</button></a
+        >
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sl</th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Mfd</th>
+            <th>Expiry date</th>
+            <th>Self Life</th>
+            <th>Return Policy</th>
+            <th>FSSAI Licence</th>
+          </tr>
+        </thead>
+        <tbody id="product-list"></tbody>
+      </table>
+    </div>
   </body>
 </html>
+<script src="js/product-list.js"></script>
+<script src="../js/load-profile-data.js"></script>
