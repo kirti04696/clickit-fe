@@ -97,7 +97,15 @@ async function login2() {
     localStorage.setItem("token", data.data.token);
     localStorage.setItem("user", JSON.stringify(data.data.user));
 
-    window.location.replace("http://127.0.0.1:5500/admin/dashboard.html");
+    if(data.data.user.userType=="ADMIN"){
+      window.location.replace("http://127.0.0.1:5500/admin/dashboard.html");
+    }else if(data.data.user.userType=="USER"){
+      window.location.replace("http://127.0.0.1:5500/user/dashboard.html");
+    }else{
+      window.location.replace("http://127.0.0.1:5500/shop/dashboard.html");
+    }
+
+    
   } else {
     console.log("something went wrong");
   }
