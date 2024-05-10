@@ -38,10 +38,7 @@ function createProductElement(data) {
 
   addcartBtn.classList.add("btn");
   addcartBtn.classList.add("btn-primary");
-  addcartBtn.setAttribute(
-    "href",
-    "../product-detail.html?id=" + data.productId
-  );
+  addcartBtn.setAttribute("href", "product-detail.html?id=" + data.productId);
   addcartBtn.innerHTML = "View product";
 
   carBody.classList.add("card-body");

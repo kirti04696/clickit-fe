@@ -91,21 +91,22 @@ async function login2() {
   });
   if (response.status == 200) {
     let data = await response.json();
+    console.log("---------------------------------------");
     console.log(data);
     $("#login-popup").modal("hide");
+    localStorage.clear();
 
-    localStorage.setItem("token", data.data.token);
-    localStorage.setItem("user", JSON.stringify(data.data.user));
+    localStorage.setItem("token", data.data.tokenData.token);
+    localStorage.setItem("user", JSON.stringify(data.data.tokenData.user));
 
-    if(data.data.user.userType=="ADMIN"){
+    if (data.data.tokenData.user.userType == "ADMIN") {
       window.location.replace("http://127.0.0.1:5500/admin/dashboard.html");
-    }else if(data.data.user.userType=="USER"){
+    } else if (data.data.tokenData.user.userType == "USER") {
       window.location.replace("http://127.0.0.1:5500/user/dashboard.html");
-    }else{
+    } else {
+      localStorage.setItem("shop", JSON.stringify(data.data.shopData));
       window.location.replace("http://127.0.0.1:5500/shop/dashboard.html");
     }
-
-    
   } else {
     console.log("something went wrong");
   }
