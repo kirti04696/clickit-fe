@@ -16,7 +16,7 @@ async function registerShop(e) {
   let bankName = document.getElementById("bankName").value;
   let ifscNumber = document.getElementById("ifscNumber").value;
 
-  let response = await fetch("http://localhost:8080/shop/register", {
+  let response = await fetch("http://127.0.0.1:8080/shop/register", {
     // Adding method type
     method: "POST",
     // Adding body or contents to send

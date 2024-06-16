@@ -26,7 +26,7 @@ async function addProduct(e) {
     let reader = new FileReader();
     reader.readAsDataURL(fileData);
     reader.onload = async () => {
-      let response = await fetch("http://localhost:8080/product/add-product", {
+      let response = await fetch("http://127.0.0.1:8080/product/add-product", {
         // Adding method type
         method: "POST",
         // Adding body or contents to send

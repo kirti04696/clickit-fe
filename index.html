@@ -245,10 +245,13 @@
         <div class="web_content">
           <div class="single">
             <img src="./shopping-healthy-food-bg banner.jpg" alt="" />
-            <h3>Find Your favorate Grocery Item at One Click</h3>
+            <h3>Find Your favourite Grocery Item at One Click</h3>
             <div class="searchbar">
-              <input type="text" placeholder="Search" />
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search" id="search-product" />
+              <i
+                class="fa-solid fa-magnifying-glass"
+                onclick="searchProduct()"
+              ></i>
             </div>
           </div>
         </div>
@@ -263,6 +266,7 @@
   </body>
 
   <script src="./js/index.js"></script>
+  <script src="./user/js/user-product.js"></script>
   <script>
     loadProductData();
   </script>

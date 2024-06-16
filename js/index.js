@@ -4,7 +4,7 @@ function signup() {
   let email = document.getElementById("email").value;
   let password = document.getElementById("pwd").value;
   let rpassword = document.getElementById("rpwd").value;
-  fetch("http://localhost:8080/user/signup", {
+  fetch("http://127.0.0.1:8080/user/signup", {
     // Adding method type
     method: "POST",
 
@@ -35,7 +35,7 @@ function login() {
   let email = document.getElementById("login-email").value;
   let password = document.getElementById("login-pwd").value;
   console.log(email + "----=--" + password);
-  fetch("http://localhost:8080/user/login", {
+  fetch("http://127.0.0.1:8080/user/login", {
     // Adding method type
     method: "POST",
     // Adding body or contents to send
@@ -76,7 +76,7 @@ async function login2() {
   } else {
     password_element.classList.remove("error");
   }
-  let response = await fetch("http://localhost:8080/user/login", {
+  let response = await fetch("http://127.0.0.1:8080/user/login", {
     // Adding method type
     method: "POST",
     // Adding body or contents to send
@@ -173,7 +173,7 @@ function createProductElement(data) {
 }
 
 async function loadProductData() {
-  let response = await fetch("http://localhost:8080/product/");
+  let response = await fetch("http://127.0.0.1:8080/product/");
   let productData = await response.json();
   let product = document.getElementById("product-container");
   for (let i = 0; i < productData.data.length; i++) {
@@ -184,7 +184,7 @@ async function loadProductData() {
 // -----------------------product details.html-----------------------
 
 async function loadProductDetailById(productId) {
-  let response = await fetch("http://localhost:8080/product/" + productId);
+  let response = await fetch("http://127.0.0.1:8080/product/" + productId);
   let productData = await response.json();
   let data = productData.data;
   console.log(data);
@@ -212,5 +212,73 @@ async function loadProductDetailById(productId) {
       descriptionTag.appendChild(h5);
       descriptionTag.appendChild(content);
     }
+  }
+  const variety = document.getElementById("variety");
+  for (let i = 0; i < data.productVarieties.length; i++) {
+    let option = document.createElement("option");
+    option.setAttribute("value", data.productVarieties[i].productVarietyId);
+    option.innerText = data.productVarieties[i].unit;
+    variety.appendChild(option);
+  }
+}
+async function varietyChange() {
+  const variety = document.getElementById("variety");
+  console.log(variety.value);
+  const token = localStorage.getItem("token");
+  let response = await fetch(
+    "http://127.0.0.1:8080/productVariety/" + variety.value,
+    {
+      // Adding method type
+      method: "GET",
+      // Adding headers to the request
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        "X-Auth-Token": token,
+      },
+    }
+  );
+  let data = await response.json();
+  document.getElementById("cart-price").value = data.data.price;
+  console.log(data.data.price);
+}
+async function addToCart() {
+  let currentURL = window.location.href;
+  let urlParams = new URL(currentURL).searchParams;
+  let productId = urlParams.get("id");
+  const token = localStorage.getItem("token");
+  const user = JSON.parse(localStorage.getItem("user"));
+  const variety = document.getElementById("variety");
+  const quantity = document.getElementById("quantity");
+  let response = await fetch("http://localhost:8080/user/add-to-cart", {
+    // Adding method type
+    method: "POST",
+    // Adding body or contents to send
+    body: JSON.stringify({
+      productId: productId,
+
+      productVarityId: variety.value,
+
+      quantity: quantity.value,
+
+      userId: user.userId,
+    }),
+    // Adding headers to the request
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      "X-Auth-Token": token,
+    },
+  });
+  if (response.status == 200) {
+    let data = await response.json();
+    $("#add-to-cart").modal("hide");
+    alert("Added to cart");
+  } else if (response.status == 400) {
+    let data = await response.json();
+    $("#add-to-cart").modal("hide");
+    alert(data.message);
+  } else {
+    let data = await response.json();
+    $("#add-to-cart").modal("hide");
+    alert("Someting wrong");
   }
 }

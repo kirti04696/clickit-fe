@@ -1,6 +1,6 @@
 async function getAllShop() {
   const token = localStorage.getItem("token");
-  let response = await fetch("http://localhost:8080/admin/shops", {
+  let response = await fetch("http://127.0.0.1:8080/admin/shops", {
     // Adding method type
     method: "GET",
     // Adding headers to the request
@@ -90,7 +90,7 @@ function getIcon(icon_name, color = "black") {
 async function activateShop(shopId, status) {
   const token = localStorage.getItem("token");
   let response = await fetch(
-    "http://localhost:8080/admin/shop/" + shopId + "?status=" + status,
+    "http://127.0.0.1:8080/admin/shop/" + shopId + "?status=" + status,
     {
       // Adding method type
       method: "PUT",
@@ -108,7 +108,7 @@ async function activateShop(shopId, status) {
 
 async function deleteShop(shopId) {
   const token = localStorage.getItem("token");
-  let response = await fetch("http://localhost:8080/admin/shop/" + shopId, {
+  let response = await fetch("http://127.0.0.1:8080/admin/shop/" + shopId, {
     // Adding method type
     method: "DELETE",
     // Adding headers to the request

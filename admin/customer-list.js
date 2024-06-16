@@ -1,6 +1,6 @@
 async function getAllUser() {
   const token = localStorage.getItem("token");
-  let response = await fetch("http://localhost:8080/admin/users", {
+  let response = await fetch("http://127.0.0.1:8080/admin/users", {
     // Adding method type
     method: "GET",
     // Adding headers to the request
