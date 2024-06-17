@@ -50,7 +50,10 @@ function createProductElement(data) {
   buybtn.classList.add("btn-primary");
 
   buybtn.classList.add("px-3");
-  buybtn.setAttribute("href", "checkout.html?id=" + data.productId);
+  buybtn.setAttribute(
+    "href",
+    "checkout.html?from=buy-button&id=" + data.productId
+  );
   buybtn.innerHTML = "Buy";
 
   btndiv.appendChild(addcartBtn);
