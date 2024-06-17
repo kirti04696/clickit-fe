@@ -121,7 +121,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="order-history.html" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
@@ -201,7 +201,6 @@
                   required=""
                   fdprocessedid="reqlze"
                 >
-                  <option value="">Choose...</option>
                   <option>India</option>
                 </select>
                 <div class="invalid-feedback">
@@ -269,13 +268,13 @@
               </div>
               <div class="form-check">
                 <input
-                  id="paypal"
+                  id="cod"
                   name="paymentMethod"
                   type="radio"
                   class="form-check-input"
                   required=""
                 />
-                <label class="form-check-label" for="paypal"
+                <label class="form-check-label" for="cod"
                   >Cash on Delivery</label
                 >
               </div>
@@ -346,6 +345,7 @@
               class="w-100 btn btn-primary btn-lg"
               type="submit"
               fdprocessedid="4g7jwt"
+              onclick="proceedToPayment()"
             >
               Pay
             </button>
@@ -404,8 +404,17 @@
       console.log(items);
       let ul = document.getElementById("my-cart-items");
       let totalPrice = 0;
+      let orderedItems = [];
 
       for (let i = 0; i < items.length; i++) {
+        console.log(items[i]);
+        orderedItems.push({
+          productId: items[i].product.productId,
+          productVarietyId:
+            items[i].product.productVarieties[0].productVarietyId,
+          quantity: items[i].quantity,
+        });
+
         let li = document.createElement("li");
         let div = document.createElement("div");
         let productName = document.createElement("h6");
@@ -452,6 +461,52 @@
       ul.appendChild(totalLi);
 
       document.getElementById("cart-item-count").innerText = items.length;
+      localStorage.setItem("orderedItems", JSON.stringify(orderedItems));
+      localStorage.setItem("totalAmount", totalPrice);
+    }
+
+    async function proceedToPayment() {
+      event.preventDefault();
+      let address =
+        document.getElementById("firstName").value +
+        " " +
+        document.getElementById("address").value +
+        " " +
+        document.getElementById("country").value +
+        " " +
+        document.getElementById("state").value +
+        " " +
+        document.getElementById("zip").value;
+
+      let paymentMethod = "";
+
+      if (document.getElementById("credit").checked) {
+        paymentMethod = "CREDIT CARD";
+      } else if (document.getElementById("debit").checked) {
+        paymentMethod = "DEBIT CARD";
+      } else if (document.getElementById("cod").checked) {
+        paymentMethod = "CASH ON DELIVERY";
+      }
+      console.log(paymentMethod);
+      let response = await fetch("http://127.0.0.1:8080/order/place-order", {
+        method: "POST",
+        body: JSON.stringify({
+          amount: parseInt(localStorage.getItem("totalAmount")),
+          paymentMode: paymentMethod,
+          orderDate: new Date(),
+          paymentStatus: "success",
+          address: address,
+          user: JSON.parse(localStorage.getItem("user")),
+          orderedItem: JSON.parse(localStorage.getItem("orderedItems")),
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+      if (response.status == 200) {
+        alert("Order plaed successfully");
+        window.location.replace("http://127.0.0.1:5500/user/dashboard.html");
+      }
     }
   </script>
 </html>

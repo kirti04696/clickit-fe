@@ -50,5 +50,10 @@ async function registerShop(e) {
   });
 
   let data = await response.json();
-  console.log(data);
+  if (response.status == 200) {
+    alert(
+      "You have registred successfully. Once your account is verfied you will recieve email for confirmation."
+    );
+    window.location.replace("http://127.0.0.1:5500");
+  }
 }

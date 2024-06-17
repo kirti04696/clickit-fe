@@ -150,47 +150,29 @@
       </div>
     </header>
 
-    <!-- ----------------------------------Cart Detail--------------------- -->
+    <!-- ----------------------------------Order History Detail--------------------- -->
     <div class="container mt-3">
-      <h2>Cart Items</h2>
+      <h2>Order History</h2>
 
       <table class="table">
         <thead>
           <tr>
-            <th>Product Name</th>
-            <th>Variety</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Sub Total</th>
-            <th>Delete</th>
+            <th>Delivery Address</th>
+            <th>Order Date</th>
+            <th>Payment Mode</th>
+            <th>Amount</th>
+            <th>Status</th>
           </tr>
         </thead>
-        <tbody id="cart-body"></tbody>
-        <tfoot>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th>Total</th>
-            <td id="total-amount"></td>
-            <th></th>
-          </tr>
-        </tfoot>
+        <tbody id="order-body"></tbody>
       </table>
-      <div class="d-flex justify-content-center mt-4">
-        <a href="checkout.html?from=checkout-page">
-          <button type="button" class="btn btn-primary px-5">
-            Proceed to Checkout
-          </button></a
-        >
-      </div>
     </div>
   </body>
 
   <script src="../js/index.js"></script>
-  <script src="./js/user-cart.js"></script>
+  <script src="../user/js/order-history.js"></script>
   <script src="../js/load-profile-data.js"></script>
   <script>
-    getUserCartItems();
+    getUserOrderHistory();
   </script>
 </html>
