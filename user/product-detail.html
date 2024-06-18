@@ -182,7 +182,9 @@
             >
               Add to Cart
             </button>
-            <button class="btn btn-warning mx-5">Buy Now</button>
+            <a href="" id="buy-now-btn">
+              <button class="btn btn-warning mx-5">Buy Now</button></a
+            >
           </div>
         </div>
       </div>
@@ -266,6 +268,11 @@
     let currentURL = window.location.href;
     let urlParams = new URL(currentURL).searchParams;
     let productId = urlParams.get("id");
+    let buyNowBtn = document.getElementById("buy-now-btn");
+    buyNowBtn.setAttribute(
+      "href",
+      "/user/checkout.html?from=buy-button&id=" + productId
+    );
     loadProductDetailById(productId);
   </script>
 </html>

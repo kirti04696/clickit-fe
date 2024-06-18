@@ -43,7 +43,10 @@ function createProductElement(data) {
 
   addcartBtn.classList.add("btn");
   addcartBtn.classList.add("btn-primary");
-  addcartBtn.setAttribute("href", "product-detail.html?id=" + data.productId);
+  addcartBtn.setAttribute(
+    "href",
+    "/user/product-detail.html?id=" + data.productId
+  );
   addcartBtn.innerHTML = "View";
 
   buybtn.classList.add("btn");
@@ -52,7 +55,7 @@ function createProductElement(data) {
   buybtn.classList.add("px-3");
   buybtn.setAttribute(
     "href",
-    "checkout.html?from=buy-button&id=" + data.productId
+    "/user/checkout.html?from=buy-button&id=" + data.productId
   );
   buybtn.innerHTML = "Buy";
 
